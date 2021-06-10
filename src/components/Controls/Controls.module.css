@@ -1,0 +1,18 @@
+.button {
+  display: inline-flex;
+  margin: 0 4px;
+  padding: 4px 12px;
+  outline: none;
+  background-color: #fff;
+  border-radius: 5px;
+  border-color: #bdbbbb;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.button:hover,
+.button:focus {
+  background-color: cornflowerblue;
+}
+.active {
+  background-color: cornflowerblue;
+}
