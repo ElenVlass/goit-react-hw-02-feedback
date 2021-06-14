@@ -1,17 +1,17 @@
 import {Component} from 'react';
-import styles from './FeedbackSelection.module.css';
 import Controls from '../Controls';
+import PropTypes from 'prop-types'
 
 class FeedbackSection extends Component {
+  static propTypes = {
+    onIncrement: PropTypes.func.isRequired,
+  };
 
   render () {
   return (
-  <>
-     <h1 className={styles.title}>Please leave feedback</h1>
     <Controls 
     onIncrement = {this.props.onIncrement}
     />
-  </>
     );
   }
 };

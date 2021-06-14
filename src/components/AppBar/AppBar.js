@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './AppBar.module.css';
+import './AppBar.scss';
 
 const AppBar = () => (
-    <div className={styles.header}></div>
+    <div className="header"></div>
 );
 
 export default AppBar;

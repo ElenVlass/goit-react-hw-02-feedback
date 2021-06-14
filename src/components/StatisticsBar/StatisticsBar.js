@@ -1,19 +1,28 @@
 import React from 'react';
-import styles from './StatisticsBar.module.css'
+import styles from './StatisticsBar.module.css';
+import PropTypes from 'prop-types'
 
 class StatisticsBar extends React.Component {
+  static defaultProps = {};
+
+  static propTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+    positivePercentage: PropTypes.number.isRequired,
+  };
 
 render () {
-  const {good, neutral, bad} = this.props;
+  const {good, neutral, bad, total, positivePercentage} = this.props;
   
   return (
 <>
-  <h2 className={styles.title}>Statistics</h2>
-  <p>Good: {good}</p>
-  <p>Neutral: {neutral}</p>
-  <p>Bad: {bad}</p>
-  <p>Total: {good + neutral + bad}</p>
-  <p>Positive feedback {Math.round(good * 100/ (good + neutral + bad)) }%</p>
+  <p className={styles.title}>Good: {good}</p>
+  <p className={styles.title}>Neutral: {neutral}</p>
+  <p className={styles.title}>Bad: {bad}</p>
+  <p className={styles.title}>Total: {total}</p>
+  <p className={styles.title}>Positive feedback {positivePercentage}%</p>
 </>
 )
     };
