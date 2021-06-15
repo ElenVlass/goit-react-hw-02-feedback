@@ -31,12 +31,14 @@ class App extends Component {
        const {good, neutral, bad} = this.state;
        const totalFeedbacks = this.countTotalFeedback();
        const positiveFeedbackPercentage = this.countPositiveFeedbackPercentage();
+       const feedbacks = Object.keys(this.state);
     return (
     <Layout>
         <Section
         title="Please leave feedback">
             <FeedbackSection 
             onIncrement = {this.onIncrement}
+            options = {feedbacks}
             />
         </Section>
         <Section
